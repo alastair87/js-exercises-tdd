@@ -1,3 +1,3 @@
 module.exports = function(numbers) {
-  return numbers.slice().map(number => number + 1);
+  return numbers.map(number => number + 1);
 };

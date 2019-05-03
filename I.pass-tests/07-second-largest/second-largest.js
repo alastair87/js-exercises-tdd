@@ -1,25 +1,24 @@
 const secondLargest = numbers => {
-  let first = numbers[0],
-    second = numbers[0];
-  numbers.forEach(number => {
-    if (number > first) {
-      second = first;
-      first = number;
-    }
-    if (first > number > second) {
-      second = number;
-    }
-  });
-  //   let second_largest = numbers[0];
+  //   let first = Number.MIN_SAFE_INTEGER;
+  //   second = Number.MIN_SAFE_INTEGER;
   //   numbers.forEach(number => {
-  //     if (number !== largest && number >= second_largest) second_largest = number;
+  //     if (number > first) {
+  //       second = first;
+  //       first = number;
+  //     }
+  //     if (first > number && number > second) {
+  //       second = number;
+  //     }
   //   });
-  return second;
+
+  //   return second;
+  return numbers
+    .slice()
+    .sort((a, b) => b - a)
+    .slice(1, 2)[0];
+  //   return Math.max(...numbers);
 };
 
 module.exports = secondLargest;
 
-/* numbers
-  .slice()
-  .sort((a, b) => b - a)
-  .slice(1, 2)[0]; */
+/*  */
